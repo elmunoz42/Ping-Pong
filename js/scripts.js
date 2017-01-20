@@ -8,27 +8,50 @@ var counter = function(count) {
     if (j % 15 === 0 ) {
       bagOfNumbers.push("Ping-Pong!");
       countOutput.push("<li id='ping-pong'>" + bagOfNumbers[i-1] + "</li>");
+      console.log(bagOfNumbers[i-1]);
     }
     else if (j % 5 === 0){
       bagOfNumbers.push("Pong!");
       countOutput.push("<li id='pong'>" + bagOfNumbers[i-1] + "</li>");
+      console.log(bagOfNumbers[i-1]);
     }
     else if (j % 3 === 0){
       bagOfNumbers.push("Ping!");
       countOutput.push("<li id='ping'>" + bagOfNumbers[i-1] + "</li>");
+      console.log(bagOfNumbers[i-1]);
     }
     else {
       bagOfNumbers.push(i);
       countOutput.push("<li>" + bagOfNumbers[i-1] + "</li>");
+      console.log(bagOfNumbers[i-1]);
     }
-
+    // alert(countOutput);
+    // console.log(countOutput);
 
   }
 
 }
 
 
-
+// var rhythmPingPong = function(userInput){
+//   var timeCount = parseInt(userInput);
+//   alert(timeCount);
+//   var startTime = Math.floor(Date.now()/1000);
+//   alert(startTime);
+//   // var timeLimit = Math.floor(Date.now()/1000) + parseInt(timeCount);
+//   var step=1;
+//   for (var j=1 ; j <= timeCount ; j++) {
+//     if (Math.floor(Date.now()/1000) - startTime > j) {
+//       step++;
+//       $("#output-list").append(countOutput[step]);
+//       // alert(step);
+//       console.log("step: " + step);
+//     }
+//     else {
+//       j=step;
+//     }
+//   }
+// }
 
 
 
@@ -46,12 +69,34 @@ $(document).ready(function(){
     event.preventDefault();
     countOutput.splice(0,countOutput.length);
     bagOfNumbers.splice(0,countOutput.length);
+
     userInput = $("#text-input").val();
+    // timeCount = userInput;
+    // console.log("timeCount: " + timeCount);
     counter(userInput);
-    countOutput =
-    $("#output-list").append(countOutput);
+    // rhythmPingPong(userInput);
+    // $("#output-list").append(countOutput);
     // alert(userInput);
     // alert(bagOfNumbers);
+
+    // rhythmPingPong:
+    var timeCount = parseInt(userInput);
+    // alert(timeCount);
+    var startTime = Math.floor(Date.now()/1000);
+    // alert(startTime);
+    // var timeLimit = Math.floor(Date.now()/1000) + parseInt(timeCount);
+    var step=1;
+    for (var j=1 ; j <= timeCount ; j++) {
+      if (Math.floor(Date.now()/1000) - startTime > j) {
+        step++;
+        $("#output-list").append(countOutput[step]);
+        console.log("step: " + step);
+      }
+      else {
+        j=step;
+      }
+    }
+
   })
 
 
