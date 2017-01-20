@@ -11,7 +11,7 @@ _This website is an aid to explaining how to play the Ping-Pong drinking game. T
 ## Specifications
 
 | Desired Behavior  | Input Example | Output Example |
-| -------------: | :-------------: | -------------:|
+| :------------- | :-------------: | -------------:|
 | 1)It can count to 2  | 2 | 1 , 2 |
 | 2)It can count to 15 and give the appropriate responses | 15 | 1,2,Ping!,4,Pong!,Ping!,...etc.|
 | 3)It has a UI element for inputing and submiting the input within the page | user submits a number | page returns an array with results |
