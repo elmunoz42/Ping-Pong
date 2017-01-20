@@ -36,9 +36,15 @@ var counter = function(count) {
 
 $(document).ready(function(){
   alert("Hello my name is Ping-Pong");
-  userInput = prompt("How high should I count?");
-  counter(userInput);
-  alert(bagOfNumbers);
+  // userInput = prompt("How high should I count?");
+  $("form#input-form").submit(function(event){
+    event.preventDefault();
+    userInput = $("#text-input").val();
+    counter(userInput);
+    $("#output-list").append(bagOfNumbers);
+    alert(userInput);
+    alert(bagOfNumbers);
+  })
 
 
 
