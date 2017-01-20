@@ -9,25 +9,58 @@
   </head>
   <body>
     <div class="container">
-      <div class="jumbotron">
-        <h1>Ping Pong Counter</h1>
-      </div>
-      <form id="input-form">
-        <div class="form-group">
-          <h3>How high do you want me to count?</h3>
-          <div>
-            <input id="text-input"class="form-control" type="text">
+      <div class="row">
+          <div class="jumbotron">
+            <h1>Ping-Pong Counting Game</h1>
+            <p id="explanation">This website will teach you how to play a drinking (or hot pepper eating) game. To play the game, alternate counting up from 1. Each time you count a number that is multiple of 3 say "Ping!" instead of the respective number. Keep counting. If your number is a multiple of 5 say "Pong!". If your number is both multiple of 3 and 5 (like 15) say "Ping-Pong!". If you make a mistake eat a hot pepper or drink. Start from the beginning. Proceed with caution and take <a href="http://trimet.org/">public transit</a> to get home! The counter bellow will show you an example of the count. <span>Have fun!</span></p>
           </div>
-        </div>
-        <button type="submit" class="btn" name="button">Go!</button>
-      </form>
-      <div class="well">
-        <ul>
-          <span id="output-list"></span>
-        </ul>
-
+          <!-- jumbotron -->
       </div>
+      <!-- top row -->
 
+      <div class="row">
+        <div class="col-md-3" id="left-menu">
+          <ul>
+            <h3>Hello world!</h3>
+            <p>I'm Carlos Muñoz Kampff and these are some of my creations up on the web and GitHub.</p>
+            <h4>On the web:</h4>
+            <li><a href="https://elmunoz42.github.io/CMK-Portfolio/">CMK Portfolio</a></li>
+            <li><a href="https://elmunoz42.github.io/trackSuggester2/">trackSuggester2</a></li>
+            <h4>On GitHub:</h4>
+            <a href="https://github.com/elmunoz42?tab=repositories">
+            <li>SPMS-website-2.0</li>
+            <li>metronomo</li>
+            <li>roman-numerals</li>
+            <li>leap-year</li>
+            <li>Epicodus-Flashcards</li>
+            <li>calculator</li>
+            <li>Music-Apps</li>
+            <li>vacation-spot</li>
+            </a>
+          </ul>
+        </div>
+        <!-- left-column -->
+        <div class="col-md-9">
+          <form id="input-form">
+            <div class="form-group">
+              <h3>Let's Play! How high do you want me to count?</h3>
+                <input id="text-input"class="form-control" type="text">
+            </div>
+            <!-- form-group -->
+            <button id="submit-button"type="submit" class="btn" name="button">Go!</button>
+          </form>
+          <div class="well">
+            <ul>
+              <span id="output-list"></span>
+            </ul>
+
+          </div>
+          <!-- well -->
+        </div>
+        <!-- right-column -->
+      </div>
+      <!-- bottom-row -->
     </div>
+    <!-- container -->
   </body>
 </html>

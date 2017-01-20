@@ -2,7 +2,10 @@
 var userInput;
 var countOutput = [];
 var bagOfNumbers = [];
+var userInputIsNaN = true;
 var counter = function(count) {
+  countOutput.splice(0,countOutput.length);
+  bagOfNumbers.splice(0,bagOfNumbers.length);
   for (var i=1 ; i <= count ; i++) {
     var j=i;
     if (j % 15 === 0 ) {
@@ -30,30 +33,31 @@ var counter = function(count) {
 
 
 
-
-
-
-
-
-
-
 ///////////UI///////////
 
 $(document).ready(function(){
-  // alert("Hello my name is Ping-Pong");
-  // userInput = prompt("How high should I count?");
+
   $("form#input-form").submit(function(event){
     event.preventDefault();
     countOutput.splice(0,countOutput.length);
-    bagOfNumbers.splice(0,countOutput.length);
-    userInput = $("#text-input").val();
-    counter(userInput);
-    countOutput =
+    bagOfNumbers.splice(0,bagOfNumbers.length);
+    userInput = Math.floor($("#text-input").val());
+    userInputIsNaN = isNaN(userInput);
+    if (parseInt(userInput) < 0) {
+      countOutput.splice(0,countOutput.length);
+      bagOfNumbers.splice(0,bagOfNumbers.length);
+      alert("Please input a positive integer and submit again. Thanks!");
+    }
+    else if ( userInputIsNaN === false ) {
+      counter(userInput);
+    }
+    else if ( userInputIsNaN === true) {
+      countOutput.splice(0,countOutput.length);
+      bagOfNumbers.splice(0,bagOfNumbers.length);
+      alert("Please input an integer and submit again. Thanks!");
+    }
+    else {}
+    $("#output-list").empty();
     $("#output-list").append(countOutput);
-    // alert(userInput);
-    // alert(bagOfNumbers);
   })
-
-
-
 });
