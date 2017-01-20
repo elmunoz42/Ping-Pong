@@ -1,6 +1,6 @@
 ///////////BE/////////////
 var userInput;
-var countOutput;
+var countOutput = [];
 var bagOfNumbers = [];
 var counter = function(count) {
   for (var i=1 ; i <= count ; i++) {
@@ -17,7 +17,8 @@ var counter = function(count) {
     else {
       bagOfNumbers.push(i);
     }
-    // alert(bagOfNumbers);
+
+    countOutput.push("<li>" + bagOfNumbers[i-1] + "</li>");
   }
 
 }
@@ -35,15 +36,18 @@ var counter = function(count) {
 ///////////UI///////////
 
 $(document).ready(function(){
-  alert("Hello my name is Ping-Pong");
+  // alert("Hello my name is Ping-Pong");
   // userInput = prompt("How high should I count?");
   $("form#input-form").submit(function(event){
     event.preventDefault();
+    countOutput.splice(0,countOutput.length);
+    bagOfNumbers.splice(0,countOutput.length);
     userInput = $("#text-input").val();
     counter(userInput);
-    $("#output-list").append(bagOfNumbers);
-    alert(userInput);
-    alert(bagOfNumbers);
+    countOutput =
+    $("#output-list").append(countOutput);
+    // alert(userInput);
+    // alert(bagOfNumbers);
   })
 
 
