@@ -12,7 +12,11 @@ li {
   margin-top: 20px;
 }
 .jumbotron {
+  margin-top: 20px;
   background-color: lightpink;
+  border-color: white;
+  border-width: thick;
+  border-style: dotted;
 }
 .well {
   background-color: lightblue;
