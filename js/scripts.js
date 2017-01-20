@@ -3,8 +3,21 @@ var userInput;
 var countOutput;
 var bagOfNumbers = [];
 var counter = function(count) {
-  for (var i=0 ; i <= count ; i++) {
-    bagOfNumbers.push(i);
+  for (var i=1 ; i <= count ; i++) {
+    var j=i;
+    if (j % 15 === 0 ) {
+      bagOfNumbers.push("Ping-Pong!");
+    }
+    else if (j % 5 === 0){
+      bagOfNumbers.push("Pong!");
+    }
+    else if (j % 3 === 0){
+      bagOfNumbers.push("Ping!");
+    }
+    else {
+      bagOfNumbers.push(i);
+    }
+    // alert(bagOfNumbers);
   }
 
 }
