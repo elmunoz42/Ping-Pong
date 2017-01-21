@@ -24,10 +24,7 @@ var counter = function(count) {
       bagOfNumbers.push(i);
       countOutput.push("<li>" + bagOfNumbers[i-1] + "</li>");
     }
-
-
   }
-
 }
 
 
