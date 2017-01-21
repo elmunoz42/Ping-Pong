@@ -12,12 +12,12 @@ _This website is an aid to explaining how to play the Ping-Pong drinking game. T
 
 | Desired Behavior  | Input Example | Output Example |
 | :------------- | :-------------: | -------------:|
-| 1) It can count to 2  | 2 | 1 , 2 |
-| 2) It can count to 15 and give the appropriate responses | 15 | 1,2,Ping!,4,Pong!,Ping!,...etc.|
-| 3) It has a UI element for inputing and submitting the input within the page | user submits a number | page returns an array with results |
-| 4) It responds to unwanted input types | "banana" | page alerts("please input an integer and submit again.")|
-| 5) It has a UI element for outputting the results into the page | user submits number| page displays the results in a list form.|
-| 6) Website is styled and has links and explanations. | N/A | N/A|
+| 1) It can count to 2.  | 2 | 1 , 2 |
+| 2) It can count to 15 and give the appropriate responses. | 15 | 1,2,Ping!,4,Pong!,Ping!,...etc.|
+| 3) It has a UI element for inputing and submitting the input within the page. | user submits a number | page returns an array with results. |
+| 4) It responds to unwanted input types. | "banana" | page alerts("please input an integer and submit again.")|
+| 5) It has a UI element for outputting the results into the page. | user submits number.| page displays the results in a list form.|
+| 6) Website is styled and has links to portfolio, github and game explanations. | N/A | N/A|
 
 ## Setup/Installation Requirements
 
