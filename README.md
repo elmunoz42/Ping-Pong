@@ -16,7 +16,7 @@ _This website is an aid to explaining how to play the Ping-Pong drinking game. T
 | 2) When user inputs 3 the page will return an incremental count to 3 but replace the number three with "Ping!" | 3 | 1,2,Ping!|
 | 3) When user inputs 5 the page will return an incremental count to 5 but replace the numbers three and five with "Ping!" and "Pong!" respectively| 5 | 1,2,Ping!,4,Pong!|
 | 4) When user inputs 10 the page will return an incremental count to 10 but replace the numbers three, five and their multiples with "Ping!" and "Pong" respectively.| 10 | 1,2,Ping!,4,Pong!,Ping!, 7, 8, Ping!,Pong! |
-| 5) When user inputs 15 the page will return an incremental count to 15 but replace the numbers 3, 5, and 15 with "Ping!", "Pong!", and "Ping-Pong!" respectively.| 15 | 1,2,Ping!,4,Pong!,Ping!,
+| 5) When user inputs 15 the page will return an incremental count to 15 but replace the numbers 3, 5, and 15 with "Ping!", "Pong!", and "Ping-Pong!" respectively.| 15 | 1,2,Ping!,4,Pong!,Ping!, 7, 8, Ping!,Pong!,11,Ping!,13,14,Ping-Pong!|
 | 6) It responds to unwanted input types. | "banana" | page alerts("please input an integer and submit again.")|
 * End Specifications.
 
