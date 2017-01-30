@@ -27,18 +27,17 @@ var counter = function(count) {
 ///////////UI///////////
 
 $(document).ready(function(){
-  // var pingListStart = "<li id='ping'>";
-  // var listEnd = "</li>";
-  // var pongListEnd = "<li id='pong'>";
-  // var pingPongListStart = "<li id='ping-pong'>";
-
+  
   $("form#input-form").submit(function(event){
     event.preventDefault();
+    // clear output-list
+    $("#output-list").empty();
     countOutput.splice(0,countOutput.length);
     bagOfNumbers.splice(0,bagOfNumbers.length);
+
+    // userInput evaluation
     userInput = Math.floor($("#text-input").val());
     userInputIsNaN = isNaN(userInput);
-    // userInput evaluation
     if (parseInt(userInput) < 0) {
       countOutput.splice(0,countOutput.length);
       bagOfNumbers.splice(0,bagOfNumbers.length);
@@ -54,8 +53,6 @@ $(document).ready(function(){
     }
     else {}
 
-    // clear output-list 
-    $("#output-list").empty();
 
     // output styling
     countOutput = bagOfNumbers.map(function(number) {
