@@ -10,29 +10,27 @@ var counter = function(count) {
     var j=i;
     if (j % 15 === 0 ) {
       bagOfNumbers.push("Ping-Pong!");
-      countOutput.push("<li id='ping-pong'>" + bagOfNumbers[i-1] + "</li>");
     }
     else if (j % 5 === 0){
       bagOfNumbers.push("Pong!");
-      countOutput.push("<li id='pong'>" + bagOfNumbers[i-1] + "</li>");
     }
     else if (j % 3 === 0){
       bagOfNumbers.push("Ping!");
-      countOutput.push("<li id='ping'>" + bagOfNumbers[i-1] + "</li>");
     }
     else {
       bagOfNumbers.push(i);
-      countOutput.push("<li>" + bagOfNumbers[i-1] + "</li>");
     }
   }
 }
 
 
-
-
 ///////////UI///////////
 
 $(document).ready(function(){
+  // var pingListStart = "<li id='ping'>";
+  // var listEnd = "</li>";
+  // var pongListEnd = "<li id='pong'>";
+  // var pingPongListStart = "<li id='ping-pong'>";
 
   $("form#input-form").submit(function(event){
     event.preventDefault();
@@ -40,6 +38,7 @@ $(document).ready(function(){
     bagOfNumbers.splice(0,bagOfNumbers.length);
     userInput = Math.floor($("#text-input").val());
     userInputIsNaN = isNaN(userInput);
+    // userInput evaluation
     if (parseInt(userInput) < 0) {
       countOutput.splice(0,countOutput.length);
       bagOfNumbers.splice(0,bagOfNumbers.length);
@@ -54,7 +53,27 @@ $(document).ready(function(){
       alert("Please input an integer and submit again. Thanks!");
     }
     else {}
+
+    // clear output-list 
     $("#output-list").empty();
+
+    // output styling
+    countOutput = bagOfNumbers.map(function(number) {
+      if (number === "Ping!") {
+        return "<li class='ping'>" + number + "</li>";
+      }
+      else if (number === "Pong!") {
+        return "<li class='pong'>" + number + "</li>";
+      }
+      else if (number === "Ping-Pong!") {
+        return "<li class='ping-pong'>" + number + "</li>";
+      } else {
+        return "<li>" + number + "</li>"
+      }
+    });
+    // bagOfNumbers.map
     $("#output-list").append(countOutput);
-  })
+  });
+  // submit button
 });
+// document ready

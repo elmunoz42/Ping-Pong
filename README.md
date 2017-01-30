@@ -12,12 +12,14 @@ _This website is an aid to explaining how to play the Ping-Pong drinking game. T
 
 | Desired Behavior  | Input Example | Output Example |
 | :------------- | :-------------: | -------------:|
-| 1) It can count to 2.  | 2 | 1 , 2 |
-| 2) It can count to 15 and give the appropriate responses. | 15 | 1,2,Ping!,4,Pong!,Ping!,...etc.|
-| 3) It has a UI element for inputing and submitting the input within the page. | user submits a number | page returns an array with results. |
-| 4) It responds to unwanted input types. | "banana" | page alerts("please input an integer and submit again.")|
-| 5) It has a UI element for outputting the results into the page. | user submits number.| page displays the results in a list form.|
-| 6) Website is styled and has links to portfolio, github and game explanations. | N/A | N/A|
+| 1) When user inputs 2 the page will return an incremental count to 2.  | 2 | 1 , 2 |
+| 2) When user inputs 3 the page will return an incremental count to 3 but replace the number three with "Ping!" | 3 | 1,2,Ping!|
+| 3) When user inputs 5 the page will return an incremental count to 5 but replace the numbers three and five with "Ping!" and "Pong!" respectively| 5 | 1,2,Ping!,4,Pong!|
+| 4) When user inputs 10 the page will return an incremental count to 10 but replace the numbers three, five and their multiples with "Ping!" and "Pong" respectively.| 10 | 1,2,Ping!,4,Pong!,Ping!, 7, 8, Ping!,Pong! |
+| 5) When user inputs 15 the page will return an incremental count to 15 but replace the numbers 3, 5, and 15 with "Ping!", "Pong!", and "Ping-Pong!" respectively.| 15 | 1,2,Ping!,4,Pong!,Ping!,
+| 6) It responds to unwanted input types. | "banana" | page alerts("please input an integer and submit again.")|
+* End Specifications.
+
 
 ## Setup/Installation Requirements
 
